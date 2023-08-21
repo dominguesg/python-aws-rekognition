@@ -1,0 +1,2 @@
+GET https://api.pexels.com/v1/collections?per_page=1
+Authorization: B8GBp2R6M3rM6ivhGsRnYa9PqUEhTu0N8iHwWsNWyKg7NF0JtyVY2Cti

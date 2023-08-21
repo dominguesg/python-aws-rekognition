@@ -56,16 +56,21 @@ def show_custom_labels(model,bucket,photo, min_confidence):
         ProjectVersionArn=model)
 
     # For object detection use case, uncomment below code to display image.
-    display_image(bucket,photo,response)
+    qtd_labels = len(response['CustomLabels'])
+    if(qtd_labels != 0):
+        display_image(bucket,photo,response)
 
-    return len(response['CustomLabels'])
+    return qtd_labels
 
 def main():
 
     bucket='custom-labels-console-us-east-2-2a47e28db2'
-    photo='test_images/1754248.jpg'
-    model='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/version/light-ml-1.2023-08-16T11.39.50/1692196790091'
-    min_confidence=8
+    # photo='test_images/1754248.jpg'
+    # photo='test_images/trafo1.png'
+    # photo='test_images/posteconcreto.jpg'
+    photo='test_images/torre-transmissao1.jpeg'
+    model='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/version/light-ml-1.2023-08-16T15.42.01/1692211322338'
+    min_confidence=20
 
     label_count=show_custom_labels(model,bucket,photo, min_confidence)
     print("Custom labels detected: " + str(label_count))

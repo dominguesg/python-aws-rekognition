@@ -20,7 +20,7 @@ def stop_model(model_arn):
     
 def main():
     
-    model_arn='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/version/light-ml-1.2023-08-16T11.39.50/1692196790091'
+    model_arn='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/version/light-ml-1.2023-08-16T15.42.01/1692211322338'
     stop_model(model_arn)
 
 if __name__ == "__main__":

@@ -25,9 +25,9 @@ def start_model(project_arn, model_arn, version_name, min_inference_units):
     
 def main():
     project_arn='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/1692192496278'
-    model_arn='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/version/light-ml-1.2023-08-16T11.39.50/1692196790091'
+    model_arn='arn:aws:rekognition:us-east-2:738018119147:project/light-ml-1/version/light-ml-1.2023-08-16T15.42.01/1692211322338'
     min_inference_units=1 
-    version_name='light-ml-1.2023-08-16T11.39.50'
+    version_name='light-ml-1.2023-08-16T15.42.0'
     start_model(project_arn, model_arn, version_name, min_inference_units)
 
 if __name__ == "__main__":
